@@ -1,17 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Sala
+      Tab 1
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button expand="block">Agregar</ion-button>
-  <ion-list>
-    <ion-item *ngFor="let item of lista" (click)="seleccionar(item)">
-      <ion-label>{{item.salaID}}</ion-label>
-    </ion-item>
-  </ion-list>
+
+
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
