@@ -35,7 +35,7 @@ export class Tab2Page implements OnInit{
   }
 
   seleccionar(dato: Cine){
-    this.router.navigate(['/',dato.cine]);
+    this.router.navigate(['/cine-detalle',dato.cine]);
   }
 
 }

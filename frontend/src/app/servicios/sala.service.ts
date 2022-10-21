@@ -27,4 +27,11 @@ export class SalaService {
       return res;
     }));
   }
+
+
+  guardarSala(sala) {
+    return  this.rest.post(this.urlBase+'guardar',null,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
 }
