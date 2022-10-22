@@ -24,7 +24,7 @@ public class CineControlador {
         return new ResponseEntity<>( lista, HttpStatus.OK);
     }
 
-    @GetMapping("obtener/")
+    @GetMapping("obtener/id")
     public ResponseEntity<CineDTO> obtenerCineById(@RequestParam Integer idCine){
         CineDTO respuesta = cineServicio.obtenerCineById(idCine);
         return new ResponseEntity<>( respuesta, HttpStatus.OK);

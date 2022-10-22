@@ -14,7 +14,7 @@ public class SalaDTO {
     private Boolean registro_activo;
 
 
-    public SalaDTO(List<Sala> sala){
+    public SalaDTO(){
         super();
     }
 

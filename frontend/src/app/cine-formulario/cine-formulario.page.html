@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cine-formulario</ion-title>
+    <ion-title>Cine Formulario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Nombre Cine</ion-label>
+      <ion-input [(ngModel)]="cine.cine"  placeholder="Enter text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Alta</ion-label>
+      <ion-input [(ngModel)]="cine.fecha_alta" placeholder="YYYY/MM/DD"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Modificacion</ion-label>
+      <ion-input [(ngModel)]="cine.fecha_modificacion" placeholder="YYYY/MM/DD"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Registro Activo/Inactivo</ion-label>
+      <ion-input [(ngModel)]="cine.registro_activo" placeholder="True / False"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="guardar()">Guardar</ion-button>
 
 </ion-content>

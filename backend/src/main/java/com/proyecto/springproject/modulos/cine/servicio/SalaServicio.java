@@ -37,6 +37,9 @@ public class SalaServicio {
     public boolean guardarSala(SalaDTO parametros){
         Sala sala = new Sala();
 
+        if(parametros.getSalaID() != null){
+            sala= salaRepositorio.getOne(parametros.getSalaID());
+        }
         sala.setNumero_sala(parametros.getNum_sala());
         sala.setTotal_asientos(parametros.getAsientos());
         sala.setFecha_alta(parametros.getFecha_alta());

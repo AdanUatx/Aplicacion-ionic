@@ -29,8 +29,8 @@ public class SalaControlador {
     }
 
     @PostMapping("guardar")
-    public ResponseEntity<Boolean> guardarSala(@RequestBody SalaDTO paramentros){
-        boolean respuesta = salaServicio.guardarSala(paramentros);
+    public ResponseEntity<Boolean> guardarSala(@RequestBody SalaDTO parametros){
+        boolean respuesta = salaServicio.guardarSala(parametros);
         return new ResponseEntity<>( respuesta, HttpStatus.OK);
     }
 

@@ -7,28 +7,24 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <ion-label>Id</ion-label>
-      <ion-input [(ngModel)]="sala.salaID" placeholder="No llenar"></ion-input>
-    </ion-item>
-    <ion-item>
       <ion-label>Numero de Sala</ion-label>
-      <ion-input [(ngModel)]="sala.numeroSala" placeholder="Enter text"></ion-input>
+      <ion-input [(ngModel)]="sala.num_sala" placeholder="Enter text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Numero de Asientos</ion-label>
-      <ion-input  [(ngModel)]="sala.totalAsiento"  placeholder="Enter text"></ion-input>
+      <ion-input  [(ngModel)]="sala.asientos"  placeholder="Enter text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Fecha de Alta</ion-label>
-      <ion-input  [(ngModel)]="sala.fechaAlta"  placeholder="YYYY/MM/DD"></ion-input>
+      <ion-input  [(ngModel)]="sala.fecha_alta"  placeholder="YYYY/MM/DD"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Fecha de Modificacion</ion-label>
-      <ion-input  [(ngModel)]="sala.fechaModificacion"  placeholder="YYYY/MM/DD"></ion-input>
+      <ion-input  [(ngModel)]="sala.fecha_modificacion"  placeholder="YYYY/MM/DD"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Registro Activo/Inactivo</ion-label>
-      <ion-input  [(ngModel)]="sala.activo"  placeholder="True / False"></ion-input>
+      <ion-input  [(ngModel)]="sala.registro_activo"  placeholder="True / False"></ion-input>
     </ion-item>
   </ion-list>
   <ion-button expand="block" (click)="guardar()">Guardar</ion-button>

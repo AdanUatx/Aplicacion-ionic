@@ -7,11 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'cine-detalle',
+    path: 'cine-detalle/:id',
     loadChildren: () => import('./cine-detalle/cine-detalle.module').then( m => m.CineDetallePageModule)
   },
   {
-    path: 'sala-detalle',
+    path: 'sala-detalle/:id',
     loadChildren: () => import('./sala-detalle/sala-detalle.module').then( m => m.SalaDetallePageModule)
   },
   {
@@ -21,14 +21,6 @@ const routes: Routes = [
   {
     path: 'cine-formulario',
     loadChildren: () => import('./cine-formulario/cine-formulario.module').then( m => m.CineFormularioPageModule)
-  },
-  {
-    path: 'sala-modificar',
-    loadChildren: () => import('./sala-modificar/sala-modificar.module').then( m => m.SalaModificarPageModule)
-  },
-  {
-    path: 'cine-modificar',
-    loadChildren: () => import('./cine-modificar/cine-modificar.module').then( m => m.CineModificarPageModule)
   }
 ];
 @NgModule({

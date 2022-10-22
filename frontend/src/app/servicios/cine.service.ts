@@ -27,4 +27,22 @@ export class CineService {
       return res;
     }));
   }
+
+  obtenerCine(id): Observable<any>{
+    return  this.rest.get(this.urlBase+'obtener/id?idCine='+id,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
+
+  guardarCine(cine) {
+    return  this.rest.post(this.urlBase+'guardar',null,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
+
+  activarInactivar(idCine) {
+    return  this.rest.put(this.urlBase+'activar-inactivar?idCine='+idCine,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
 }

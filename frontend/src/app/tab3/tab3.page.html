@@ -10,7 +10,7 @@
   <ion-button expand="block" [routerLink]="['/sala-formulario']">Agregar</ion-button>
   <ion-list>
     <ion-item *ngFor="let item of lista" (click)="seleccionar(item)">
-      <ion-label> Sala {{item.salaID}}</ion-label>
+      <ion-label> ID: {{item.salaID}} Numero de Sala: {{item.num_sala}} Total de Asientos: {{item.asientos}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -1,9 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cine-detalle</ion-title>
+    <ion-title>Cine detalle</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-label> ID Cine: {{cine.cineID}}</ion-label>
+  <br>
+  <ion-label> Cine: {{cine.cine}}</ion-label>
+  <br>
+  <ion-label> Registro: {{cine.registro_activo}}</ion-label>
+  <br>
+  <ion-button expand="block" (click)="irAmodificar()"> Editar </ion-button>
 
+  <ion-button *ngIf="!cine.registro_activo" [disabled]="loader" expand="block" color="success" (click)="activarDesactivar()"> Activar</ion-button>
+  <ion-button  *ngIf="cine.registro_activo" [disabled]="loader"  expand="block" color="danger" (click)="activarDesactivar()"> Inactivar</ion-button>
 </ion-content>

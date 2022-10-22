@@ -36,6 +36,9 @@ public class CineServicio {
 
     public boolean guardarCine(CineDTO parametros){
         Cine cine = new Cine();
+        if(parametros.getCineID() != null){
+            cine= cineRepositorio.getOne(parametros.getCineID());
+        }
 
         cine.setNombre(parametros.getCine());
         cine.setFecha_alta(parametros.getFecha_alta());

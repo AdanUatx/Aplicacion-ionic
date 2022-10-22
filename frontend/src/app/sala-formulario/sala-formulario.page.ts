@@ -27,11 +27,11 @@ export class SalaFormularioPage implements OnInit {
   guardar(){
     const dato = {
       salaID: this.sala.salaID,
-      num_sala: this.sala.numeroSala,
-      asientos: this.sala.totalAsiento,
-      fecha_alta: this.sala.fechaAlta,
-      fecha_modificacion: this.sala.fechaModificacion,
-      registro_activo: this.sala.activo,
+      num_sala: this.sala.num_sala,
+      asientos: this.sala.asientos,
+      fecha_alta: this.sala.fecha_alta,
+      fecha_modificacion: this.sala.fecha_modificacion,
+      registro_activo: this.sala.registro_activo,
     };
     this.salaServicio.guardarSala(dato).subscribe( res => {
       console.log(res);

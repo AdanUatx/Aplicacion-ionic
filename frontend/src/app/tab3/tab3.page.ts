@@ -12,6 +12,7 @@ export class Tab3Page implements OnInit{
 
 
   public lista: Array<Sala>;
+
   constructor(
     private router: Router,
     private salaServicios: SalaService
@@ -36,7 +37,7 @@ export class Tab3Page implements OnInit{
   }
 
   seleccionar(dato: Sala){
-    this.router.navigate(['/sala-detalle',dato.salaID]);
+    this.router.navigate(['/sala-detalle',dato.salaID, dato]);
   }
 
 }

@@ -39,7 +39,7 @@ export class SalaDetallePage implements OnInit {
   }
 
   irAmodificar(){
-    this.router.navigate(['/sala-modificar'],{queryParams: this.sala});
+    this.router.navigate(['/sala-formulario'],{queryParams: this.sala});
   }
 
   activarDesactivar() {
@@ -47,7 +47,7 @@ export class SalaDetallePage implements OnInit {
     this.salaServicio.activarInactivar(this.sala.salaID).subscribe(
       respuesta => {
         console.log('correcto....', respuesta);
-        this.sala.activo = !this.sala.activo;
+        this.sala.registro_activo = !this.sala.registro_activo;
       },
       error => {
         console.log('Ocurrio un error al modifacar el registro', error);
