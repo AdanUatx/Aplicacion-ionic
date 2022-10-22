@@ -22,7 +22,7 @@ public class SalaControlador {
         return new ResponseEntity<>( lista, HttpStatus.OK);
     }
 
-    @GetMapping("obtener/")
+    @GetMapping("obtener/id")
     public ResponseEntity<SalaDTO> obtenerSalaById(@RequestParam Integer idSala){
         SalaDTO respuesta = salaServicio.obtenerSalaById(idSala);
         return new ResponseEntity<>( respuesta, HttpStatus.OK);

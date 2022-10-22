@@ -21,7 +21,7 @@ export class SalaFormularioPage implements OnInit {
       queryParam => {
         this.sala = JSON.parse(JSON.stringify(queryParam));
       }
-    );
+    )
   }
 
   guardar(){
@@ -31,11 +31,11 @@ export class SalaFormularioPage implements OnInit {
       asientos: this.sala.totalAsiento,
       fecha_alta: this.sala.fechaAlta,
       fecha_modificacion: this.sala.fechaModificacion,
-      registro_activo: this.sala.activo
+      registro_activo: this.sala.activo,
     };
     this.salaServicio.guardarSala(dato).subscribe( res => {
       console.log(res);
-      this.router.navigate(['/tab1']);
+      this.router.navigate(['/tabs/tab1']);
     });
   }
 

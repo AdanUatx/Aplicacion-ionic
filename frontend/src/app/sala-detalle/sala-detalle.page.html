@@ -5,5 +5,12 @@
 </ion-header>
 
 <ion-content>
+  {{sala.salaID}}
+  {{sala.numeroSala}}
+  {{sala.totalAsiento}}
+  {{sala.activo}}
+  <ion-button expand="block" (click)="irAmodificar()"> Editar </ion-button>
 
+  <ion-button *ngIf="!sala.activo" [disabled]="loader" expand="block" color="success" (click)="activarDesactivar()"> Activar</ion-button>
+  <ion-button  *ngIf="sala.activo" [disabled]="loader"  expand="block" color="danger" (click)="activarDesactivar()"> Inactivar</ion-button>
 </ion-content>

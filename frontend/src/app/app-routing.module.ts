@@ -21,6 +21,14 @@ const routes: Routes = [
   {
     path: 'cine-formulario',
     loadChildren: () => import('./cine-formulario/cine-formulario.module').then( m => m.CineFormularioPageModule)
+  },
+  {
+    path: 'sala-modificar',
+    loadChildren: () => import('./sala-modificar/sala-modificar.module').then( m => m.SalaModificarPageModule)
+  },
+  {
+    path: 'cine-modificar',
+    loadChildren: () => import('./cine-modificar/cine-modificar.module').then( m => m.CineModificarPageModule)
   }
 ];
 @NgModule({

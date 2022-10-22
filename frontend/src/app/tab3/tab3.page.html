@@ -10,9 +10,7 @@
   <ion-button expand="block" [routerLink]="['/sala-formulario']">Agregar</ion-button>
   <ion-list>
     <ion-item *ngFor="let item of lista" (click)="seleccionar(item)">
-      <ion-label>{{item.salaID}}</ion-label>
+      <ion-label> Sala {{item.salaID}}</ion-label>
     </ion-item>
   </ion-list>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>

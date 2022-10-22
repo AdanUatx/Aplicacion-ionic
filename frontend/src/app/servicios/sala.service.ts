@@ -28,10 +28,23 @@ export class SalaService {
     }));
   }
 
+  obtenerSala(id): Observable<any>{
+    return  this.rest.get(this.urlBase+'obtener/id?idSala='+id,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
 
   guardarSala(sala) {
     return  this.rest.post(this.urlBase+'guardar',null,this.header).pipe( map ( res => {
       return res;
     }));
   }
+
+  activarInactivar(idSala) {
+    return  this.rest.put(this.urlBase+'activar-inactivar?idSala='+idSala,this.header).pipe( map ( res => {
+      return res;
+    }));
+  }
+
+
 }
